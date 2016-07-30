@@ -1,7 +1,7 @@
 jQuery Tokeninput: A Tokenizing Autocomplete Text Entry
 =======================================================
 
-NOTE: This fork does not have to be managed in future. It contains only small fixes that improved behaviour on mobile devices. Specially the problem where searching was not working while typing in tokeninput on iphone or ipad. Also there was problem that TAB key didn't move focus to another input in form. We are using this fork in the [CVlite.sk](http://www.cvlite.sk/) project until these issues will be fixed in official version.
+NOTE: We do not plan any active development here. This fork contains only small fixes that improved behaviour on mobile devices. The solution is not ideal but it has worked for us. We are using this fork of jquery-tokeninput in the [CVlite.sk](http://www.cvlite.sk/) project until issues will be fixed in official version. Specially the problem where searching was not working while typing in tokeninput on iphone or ipad. Also there was problem that TAB key didn't move focus to another input in form. 
 
 Overview
 --------
