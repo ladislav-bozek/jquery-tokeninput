@@ -54,9 +54,9 @@
     tokenValue: "id",
 
     // Behavioral settings
-    allowFreeTagging: false,
-    allowTabOut: false,
-    autoSelectFirstResult: false,
+    allowFreeTagging: true,
+    allowTabOut: true,
+    autoSelectFirstResult: true,
 
     // Callbacks
     onResult: null,
@@ -373,11 +373,36 @@
                     return true;
 
                   default:
-                    if (String.fromCharCode(event.which)) {
-                      // set a timeout just long enough to let this function finish.
-                      setTimeout(function(){ do_search(); }, 5);
-                    }
                     break;
+              }
+          }).keyup(function (event) {
+              var previous_token;
+              var next_token;
+
+              switch(event.keyCode) {
+                  case KEY.LEFT:
+                  case KEY.RIGHT:
+                  case KEY.UP:
+                  case KEY.DOWN:
+                      break;
+
+                  case KEY.BACKSPACE:
+                      break;
+
+                  case KEY.TAB:
+                  case KEY.ENTER:
+                  case KEY.NUMPAD_ENTER:
+                  case KEY.COMMA:
+
+                  case KEY.ESCAPE:
+
+                      break;
+                  default:
+                      if(String.fromCharCode(event.which)) {
+                          // set a timeout just long enough to let this function finish.
+                          setTimeout(function(){do_search();}, 5);
+                      }
+                      break;
               }
           });
 
